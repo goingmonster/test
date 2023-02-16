@@ -4,7 +4,7 @@
 
 python版本 ：3.9.13
     
-    pip install django==4.1.6
+    pip install django==3.2.0
 
 
 **初始化django项目**
