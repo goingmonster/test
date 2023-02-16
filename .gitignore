@@ -19,4 +19,8 @@
 */__pycache__/
 *.pyc
 *.log
+<<<<<<< HEAD
 */json/node_modules/
+=======
+*/json/node_modules/
+>>>>>>> 242e47a775614ae0078e45c5ffda45fe7ba22fff
