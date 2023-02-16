@@ -19,3 +19,4 @@
 */__pycache__/
 *.pyc
 *.log
+*/json/node_modules/
