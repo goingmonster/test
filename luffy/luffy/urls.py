@@ -16,9 +16,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from testapp.views import testlog
+from rest_framework.routers import DefaultRouter
+
+from testapp.views import PublisherDocumentView
+
+router = DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('testlog/', testlog),
+    path('search/', PublisherDocumentView.as_view({'get': 'list'}))
 ]
+urlpatterns += router.urls

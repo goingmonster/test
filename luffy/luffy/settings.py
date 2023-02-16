@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'testapp',
+    'rest_framework',
+    'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
 ]
 
 MIDDLEWARE = [
@@ -164,5 +167,23 @@ LOGGING = {
             'handlers': ['file'],
             'propagate': True,
         }
+    }
+}
+
+# 配置DRF
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES':
+    ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+}
+
+# 配置ES host
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': [
+            'http://10.24.103.151:9200', 'http://10.24.103.153:9200',
+            'http://10.24.103.152:9200'
+        ]
     }
 }
